@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Item = (id,nombre,precio,img) => {
+const Item = ({id,nombre,precio,img}) => {
   return (
     <div>
       <img src={img} alt={nombre} />
