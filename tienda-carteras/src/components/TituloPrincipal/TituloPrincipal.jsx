@@ -6,8 +6,10 @@ import React from 'react'
 
 const TituloPrincipal = (props) => {
   return (
-    
-   <h1>{props.saludo}</h1>
+    <>
+    <h1 style={props.colorFondo}>{props.saludo}</h1>
+    </>
+   
   )
 }
 
