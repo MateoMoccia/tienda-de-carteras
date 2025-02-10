@@ -11,6 +11,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 const App = () => {
   return (
     <>
+     <Router basename="/tienda-de-carteras"></Router>
       <Router>
         <NavBar />
         <ItemListContainer/>
