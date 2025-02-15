@@ -7,14 +7,16 @@ import Cinturones from './Pages/Cinturones';
 import Bolsas from './Pages/Bolsas';
 import Inicio from './Pages/Inicio';  
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ProductosLista from './components/ProductosRndLista/ProductosLista';
 
 const App = () => {
   return (
     <>
-     <Router basename="/tienda-de-carteras"></Router>
+     <Router></Router>
       <Router>
         <NavBar />
-        <ItemListContainer/>
+        <ProductosLista/>
+        {/* <ItemListContainer/> */}
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/carteras" element={<Carteras />} />

@@ -1,20 +1,18 @@
-import React, { useRef } from 'react'
+import React, { useState } from 'react'
 import './CartWidget.css'
 
-
 const Carrito = () => {
- 
-const cantidadProductos = useRef (0)
+  const [cantidadProductos, setCantidadProductos] = useState(0)
 
-function agregarAlCarrito () {
-  cantidadProductos.current= cantidadProductos.current + 1
-  console.log(cantidadProductos.current);
-  
-}
+  function agregarAlCarrito() {
+    setCantidadProductos(cantidadProductos + 1)
+    console.log(cantidadProductos + 1) // Aquí se puede ver el valor actualizado en consola
+  }
 
-    return (
+  return (
     <div>
-      <img className="imgCarrito" src="../img/carrito.png" alt="" />
+      <img src="/img/carrito.png" alt="Carrito" />
+      <span>{cantidadProductos}</span> {/* Mostrar el número de productos en el carrito */}
       <button onClick={agregarAlCarrito}>Pablo</button>
     </div>
   )
