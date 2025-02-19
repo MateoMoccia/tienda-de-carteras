@@ -1,4 +1,34 @@
-.imgCarrito {
-    width: 30px;  /* Ajusta el tamaño de la imagen */
-    height: 30px;  /* Ajusta el tamaño de la imagen */
-  }
+.carrito-container {
+  position: relative; 
+  display: inline-block; 
+}
+
+.Carrito-boton {
+  width: 60px; 
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ 
+}
+.Carrito-boton:hover {
+  transform: scale(1.15); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+  background-color: #f0f0f0; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; 
+}
+
+.carrito-cantidad {
+  position: absolute;
+  top: 0;  
+  right: 0; 
+  background-color: red; 
+  color: white; 
+  font-size: 12px; 
+  font-weight: bold;
+  border-radius: 50%; 
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}

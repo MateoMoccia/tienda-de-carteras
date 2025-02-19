@@ -1,21 +1,15 @@
-import React, { useState } from 'react'
-import './CartWidget.css'
+import React, { useContext } from 'react';
+import { CarritoContext } from '../../Context/CarritoContext'
+import './CartWidget.css';
 
-const Carrito = () => {
-  const [cantidadProductos, setCantidadProductos] = useState(0)
 
-  function agregarAlCarrito() {
-    setCantidadProductos(cantidadProductos + 1)
-    console.log(cantidadProductos + 1) // Aquí se puede ver el valor actualizado en consola
-  }
-
+const Carrito = ({ cantidadProductos }) => {
   return (
-    <div>
-      <img src="/img/carrito.png" alt="Carrito" />
-      <span>{cantidadProductos}</span> {/* Mostrar el número de productos en el carrito */}
-      <button onClick={agregarAlCarrito}>Pablo</button>
+    <div className="carrito-container">
+      <img className="Carrito-boton" src="/img/carrito.png" alt="Carrito" />
+      {cantidadProductos > 0 && <span className="carrito-cantidad">{cantidadProductos}</span>}
     </div>
-  )
-}
+  );
+};
 
-export default Carrito
+export default Carrito;
