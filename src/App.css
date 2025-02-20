@@ -21,19 +21,21 @@ h2 {
   font-weight: 600;
   font-style: normal;
   text-align: center;
-  font-size: 40px;
+  font-size: 45px; 
   border: 1px solid #ddd;
-  width: 60%;
+  width: 70%; 
   margin: 20px auto;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
-  background-color: white;
-  opacity: 0; /* Inicialmente invisible */
-  animation: fadeIn 1s ease-out forwards; /* Animación que hace que aparezca gradualmente */
+  padding: 15px; 
+  border-radius: 12px; 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
+  background-color: #fff; 
+  color: #333; 
+  opacity: 0; 
+  animation: fadeIn 1s ease-out forwards; 
+  transition: all 0.3s ease; 
 }
 
-/* Definición de la animación */
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -41,6 +43,13 @@ h2 {
   100% {
     opacity: 1;
   }
+}
+
+h2:hover {
+  color: black; 
+  border-color: whitesmoke; 
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
 }
 
 h3 {

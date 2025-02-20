@@ -4,7 +4,7 @@ import './ProductoLista.css';
 
 
 
-const Productos = [
+export const Productos = [
   { id: 1, imagen: "/img/Mini-Bag-Prana.png", nombre: "Mini Bag Prana", precio: "20.000", categoria: "carteras" },
   { id: 2, imagen: "/img/Mini-Bag-Ananda.png", nombre: "Mini Bag Ananda", precio: "26.200", categoria: "carteras" },
   { id: 3, imagen: "/img/Mini-Bag-Clasica.png", nombre: "Mini Bag Clasica", precio: "21.600", categoria: "carteras" },
@@ -72,6 +72,7 @@ const ProductosLista = ({ categoria, agregarAlCarrito }) => {
         productosFiltrados.map((producto) => (
           <ProductoRnd
             key={producto.id}
+            id={producto.id}
             imagen={producto.imagen}
             nombre={producto.nombre}
             precio={producto.precio}

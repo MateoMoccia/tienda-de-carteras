@@ -27,7 +27,7 @@ const Inicio = () => {
   return (
     <div className="container">
             <h2>Nuestros mas vendidos! </h2>
-      <div className="productos">
+      <article className="productos">
         {productos.map((producto, index) => (
           <ProductoRnd 
             key={index}  
@@ -37,9 +37,9 @@ const Inicio = () => {
             sinExtras={true}  
           />
         ))}
-      </div>
+      </article>
       <div className='container-2'>
-      <div className='container-3'>
+      <aside className='container-3'>
       <div className="item">
         <div className="icon"><FaTruck /></div>
         <div className="title">Envío a Domicilio</div>
@@ -60,19 +60,18 @@ const Inicio = () => {
         <div className="title">Pick Up</div>
         <div>Sin cargo en tiendas habilitadas</div>
       </div>
-      </div>
+      </aside>
       <div className='graciasInstagram'>
         <img src="/img/Imagen-Prana-Inicio.png" alt="ImagenPrana" />
         <div className='textoContainer'>
           <p className='gracias'>Gracias por elegirnos</p>
-          <p className='instagramMensaje'>No te olvides de publicar una foto con tu bag etiquetandonos para conseguir un 10% off en tu próxima compra!</p>
+          <p className='instagramMensaje'>No te olvides de publicar una foto con tu producto etiquetandonos para conseguir un 10% off en tu próxima compra!</p>
           <a href="https://www.instagram.com/_pranabags/?igsh=MXU5MDI1enBwYWticw%3D%3D" className='LinkInstagram' target="_blank">Nuestro Instagram</a>
         </div>
          {/* IMPORTANTE: Ya se que la consigna dice que la pagina debia respetar el modelo de "Single Page App" pero por un tema de funcionalidad y opinion personal agrego el "target="blank"" 
 espero que esto no me baje nota, Muchas gracias*/}
       </div>
-      
-      <div className='contenedor-final'>
+      <footer className='contenedor-final'>
         <h3>Contacto</h3>
         <p>pranabags5@gmail.com / 11-3863-0710</p>
         <h3> Métodos de pago</h3>
@@ -112,7 +111,7 @@ espero que esto no me baje nota, Muchas gracias*/}
            {/* {/* IMPORTANTE: Ya se que la consigna dice que la pagina debia respetar el modelo de "Single Page App" pero como ya dije anteriormente es un tema puramente de funcionalidad
           no de que no sepa hacerlo sin redirigir a otras ventanas a traves de los links */}
         </div>
-      </div>
+      </footer>
     </div>
     </div>
   );

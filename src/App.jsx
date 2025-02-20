@@ -7,10 +7,12 @@ import Accesorios from './Pages/Accesorios';
 import Cinturones from './Pages/Cinturones';
 import Bolsas from './Pages/Bolsas';
 import Inicio from './Pages/Inicio';  
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+
 
 const App = () => {
   return (
-    <Router>  {/* Mantén solo el Router aquí */}
+    <Router>  
       <NavBar />
       <Routes>
         <Route path="/" element={<Inicio />} />
@@ -18,7 +20,8 @@ const App = () => {
         <Route path="/bolsas" element={<Bolsas />} />
         <Route path="/cinturones" element={<Cinturones />} />
         <Route path="/accesorios" element={<Accesorios />} />
-      </Routes>
+        <Route path="/detalle/:id" element={<ItemDetailContainer />} />
+        </Routes>
     </Router>
   );
 };
