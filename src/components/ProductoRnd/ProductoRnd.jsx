@@ -4,9 +4,7 @@ import './ProductoRnd.css';
 import ItemCounter from '../ItemCounter/ItemCounter';
 
 const ProductoRnd = ({ id, imagen, nombre, precio, agregarAlCarrito, sinExtras }) => {
-  if (!id) {
-    console.log('ID no está presente en ProductoRnd:', id);  // Verifica si id existe aquí
-  }
+  const producto = { id, imagen, nombre, precio };  // Creamos el objeto producto para pasar a ItemCounter
 
   return (
     <div className='ProductosContainer'>
@@ -16,9 +14,8 @@ const ProductoRnd = ({ id, imagen, nombre, precio, agregarAlCarrito, sinExtras }
         </div>
         <h3 className='NombreProductos'>{nombre}</h3>
         {!sinExtras && <p className='PrecioProductos'>{precio}$</p>}
-        {!sinExtras && <ItemCounter agregarAlCarrito={agregarAlCarrito} />}
-
-        {/* Verifica si id está siendo pasado correctamente */}
+        {!sinExtras && <ItemCounter producto={producto} agregarAlCarrito={agregarAlCarrito} />}
+        
         {!sinExtras && <Link to={`/detalle/${id}`} className='btn-detalles'>
           <p>Ver detalles</p>
         </Link>}

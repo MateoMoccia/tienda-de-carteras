@@ -3,14 +3,49 @@ import { createContext, useState } from "react";
 export const CarritoContext = createContext();
 
 const CarritoProvider = ({ children }) => {
+  const [productosEnCarrito, setProductosEnCarrito] = useState([]);
   const [cantidadEnCarrito, setCantidadEnCarrito] = useState(0);
 
-  const agregarAlCarrito = (cantidad) => {
-    setCantidadEnCarrito((prevCantidad) => prevCantidad + cantidad);
+  // Función para agregar productos al carrito
+  const agregarAlCarrito = (producto, cantidad) => {
+    const productoExistente = productosEnCarrito.find(item => item.id === producto.id);
+
+    if (productoExistente) {
+      setProductosEnCarrito((prev) =>
+        prev.map(item =>
+          item.id === producto.id
+            ? { ...item, cantidad: item.cantidad + cantidad }
+            : item
+        )
+      );
+    } else {
+      setProductosEnCarrito((prev) => [...prev, { ...producto, cantidad }]);
+    }
+
+    setCantidadEnCarrito((prev) => prev + cantidad);
   };
 
+  // Función para vaciar el carrito
+  const vaciarCarrito = () => {
+    setProductosEnCarrito([]);
+    setCantidadEnCarrito(0);
+  };
+
+  const calcularTotal = () => {
+    const total = productosEnCarrito.reduce((acc, producto) => {
+      // Eliminamos los puntos de los precios que vienen como string
+      const precioNumerico = parseFloat(producto.precio.toString().replace(/\./g, ''));
+      
+      if (!isNaN(precioNumerico)) {
+        return acc + (precioNumerico * producto.cantidad);
+      }
+      return acc;
+    }, 0);
+  
+    return total.toLocaleString('es-AR', { style: 'currency', currency: 'ARS', minimumFractionDigits: 0 });
+  };  
   return (
-    <CarritoContext.Provider value={{ cantidadEnCarrito, agregarAlCarrito }}>
+    <CarritoContext.Provider value={{ productosEnCarrito, cantidadEnCarrito, agregarAlCarrito, vaciarCarrito, calcularTotal }}>
       {children}
     </CarritoContext.Provider>
   );

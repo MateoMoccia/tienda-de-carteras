@@ -1,13 +1,13 @@
 import { useState } from "react";
 import './ItemCounter.css'; 
 
-const ItemCounter = ({ agregarAlCarrito }) => {
+const ItemCounter = ({ producto, agregarAlCarrito }) => {
   const [cantidad, setCantidad] = useState(0);
 
   const agregarAlCarritoHandler = () => {
     if (cantidad > 0) {
-      agregarAlCarrito(cantidad);
-      setCantidad(0);
+      agregarAlCarrito(producto, cantidad);  // Pasamos el producto y cantidad al carrito
+      setCantidad(0);  // Reseteamos el contador
     }
   };
 
@@ -19,7 +19,6 @@ const ItemCounter = ({ agregarAlCarrito }) => {
         <button onClick={() => cantidad > 0 && setCantidad(cantidad - 1)}>-</button>
        
         <button onClick={agregarAlCarritoHandler}>Agregar al carrito</button>
-        
       </div>
     </div>
   );
