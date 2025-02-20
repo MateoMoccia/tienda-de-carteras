@@ -14,7 +14,7 @@ import Checkout from './components/Checkout/Checkout';
 const App = () => {
   return (
     <CarritoProvider> {/* Asegura que el CarritoContext esté disponible para todos los componentes */}
-      <Router>
+      <Router basename="/tienda-de-carteras"> {/* Configuración del basename */}
         <NavBar />
         <Routes>
           <Route path="/" element={<Inicio />} />
