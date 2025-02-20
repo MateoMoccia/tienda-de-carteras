@@ -1,8 +1,4 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // base: '/tienda-de-carteras/', 
+  base: '/tienda-de-carteras/', // Ajuste para el subdirectorio en GitHub Pages
 })
