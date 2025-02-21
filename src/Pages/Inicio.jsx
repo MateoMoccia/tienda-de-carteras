@@ -7,17 +7,17 @@ const Inicio = () => {
   
   const productos = [
     {
-      imagen: '/img/Mini-Bag-California.png',
+      imagen: '/tienda-de-carteras//img/Mini-Bag-California.png',
       nombre: 'Mini Bag California',
       precio: 0
     },
     {
-      imagen: '/img/Bolso-Totebag.png',
+      imagen: '/tienda-de-carteras//img/Bolso-Totebag.png',
       nombre: 'Totebag',
       precio: 0
     },
     {
-      imagen: '/img/Cinturon-Diesel.png',
+      imagen: '/tienda-de-carteras//img/Cinturon-Diesel.png',
       nombre: 'Cinturon Diesel',
       precio: 0
     }
@@ -62,7 +62,7 @@ const Inicio = () => {
       </div>
       </aside>
       <div className='graciasInstagram'>
-        <img src="/img/Imagen-Prana-Inicio.png" alt="ImagenPrana" />
+        <img src="/tienda-de-carteras//img/Imagen-Prana-Inicio.png" alt="ImagenPrana" />
         <div className='textoContainer'>
           <p className='gracias'>Gracias por elegirnos</p>
           <p className='instagramMensaje'>No te olvides de publicar una foto con tu producto etiquetandonos para conseguir un 10% off en tu próxima compra!</p>
@@ -75,9 +75,9 @@ espero que esto no me baje nota, Muchas gracias*/}
         <h3>Contacto</h3>
         <p>pranabags5@gmail.com / 11-3863-0710</p>
         <h3> Métodos de pago</h3>
-        <img src="/img/imagen-visa.png" alt="imagen visa" />
-        <img src="/img/imagen-mercado-pago.jpg" alt="imagen mercado pago" />
-        <img src="/img/imagen-master-card.png" alt="imagen master card" />
+        <img src="/tienda-de-carteras//img/imagen-visa.png" alt="imagen visa" />
+        <img src="/tienda-de-carteras//img/imagen-mercado-pago.jpg" alt="imagen mercado pago" />
+        <img src="/tienda-de-carteras//img/imagen-master-card.png" alt="imagen master card" />
         <h3>Nuestras Redes Sociales</h3>
         <div className="social-icons">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">

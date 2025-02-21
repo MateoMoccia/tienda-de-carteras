@@ -38,7 +38,7 @@ const Carrito = () => {
   return (
     <div className="carrito-container" ref={carritoRef}>
       <button onClick={toggleCarrito}>
-        <img className="Carrito-boton" src="/img/carrito.png" alt="Carrito" />
+        <img className="Carrito-boton" src="/tienda-de-carteras//img/carrito.png" alt="Carrito" />
         {cantidadEnCarrito > 0 && <span className="carrito-cantidad">{cantidadEnCarrito}</span>}
       </button>
       {mostrarCarrito && <div className="carrito-sidebar">
